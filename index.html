@@ -127,43 +127,58 @@
       background: transparent;
     }
 
-    /* ─── FORM PLACEHOLDER ─── */
-    .form-placeholder {
+    /* ─── KIT FORM OVERRIDES ─── */
+    .ck-form-wrap {
       max-width: 500px;
-      margin: 0 auto;
     }
 
-    .form-placeholder input[type="email"] {
-      width: 100%;
-      padding: 14px 16px;
-      font-size: 15px;
-      border: 1px solid #444;
-      border-radius: 6px;
-      background: var(--dark3);
-      color: white;
-      margin-bottom: 12px;
-      outline: none;
+    .ck-form-wrap .formkit-fields {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 12px !important;
     }
 
-    .form-placeholder input[type="email"]::placeholder { color: #777; }
-    .form-placeholder input[type="email"]:focus { border-color: var(--blue); }
-
-    .form-placeholder button {
-      width: 100%;
-      padding: 14px 24px;
-      font-size: 15px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      border: none;
-      border-radius: 6px;
-      background: var(--yellow);
-      color: #000;
-      cursor: pointer;
-      transition: all 0.2s;
+    .ck-form-wrap .formkit-field,
+    .ck-form-wrap .formkit-submit {
+      flex: 1 0 100% !important;
+      margin: 0 !important;
     }
 
-    .form-placeholder button:hover { opacity: 0.9; transform: scale(1.01); }
+    .ck-form-wrap .formkit-input {
+      width: 100% !important;
+      padding: 14px 16px !important;
+      font-size: 15px !important;
+      border: 1px solid #444 !important;
+      border-radius: 6px !important;
+      background: var(--dark3) !important;
+      color: #fff !important;
+      font-family: 'Inter', sans-serif !important;
+    }
+
+    .ck-form-wrap .formkit-input::placeholder { color: #777 !important; }
+    .ck-form-wrap .formkit-input:focus { border-color: var(--blue) !important; outline: none !important; }
+
+    .ck-form-wrap .formkit-submit {
+      width: 100% !important;
+      padding: 0 !important;
+      border: none !important;
+      border-radius: 6px !important;
+      background: var(--yellow) !important;
+      color: #000 !important;
+      cursor: pointer !important;
+      font-family: 'Inter', sans-serif !important;
+      transition: all 0.2s !important;
+    }
+
+    .ck-form-wrap .formkit-submit:hover { opacity: 0.9; }
+
+    .ck-form-wrap .formkit-submit > span {
+      padding: 14px 24px !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+    }
 
     /* ─── COUNTDOWN ─── */
     .countdown-section {
@@ -355,7 +370,7 @@
       margin-bottom: 32px;
     }
 
-    .bottom-cta .form-placeholder {
+    .bottom-cta .ck-form-wrap {
       max-width: 500px;
       width: 100%;
       margin: 0 auto 8px;
@@ -462,9 +477,9 @@
           <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
           <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
             <div class="formkit-field">
-              <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required type="email" style="color:#fff;background:#242424;border:1px solid #444;border-radius:6px;padding:14px 16px;font-size:15px;">
+              <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required type="email">
             </div>
-            <button data-element="submit" class="formkit-submit" style="color:#000;background:#F9E35D;border-radius:6px;font-weight:700;font-size:15px;letter-spacing:0.06em;text-transform:uppercase;">
+            <button data-element="submit" class="formkit-submit">
               <div class="formkit-spinner"><div></div><div></div><div></div></div>
               <span>Join the Low-Ticket Launchpad LIVE Waitlist</span>
             </button>
@@ -573,9 +588,9 @@
           <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
           <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
             <div class="formkit-field">
-              <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required type="email" style="color:#fff;background:#242424;border:1px solid #444;border-radius:6px;padding:14px 16px;font-size:15px;">
+              <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required type="email">
             </div>
-            <button data-element="submit" class="formkit-submit" style="color:#000;background:#F9E35D;border-radius:6px;font-weight:700;font-size:15px;letter-spacing:0.06em;text-transform:uppercase;">
+            <button data-element="submit" class="formkit-submit">
               <div class="formkit-spinner"><div></div><div></div><div></div></div>
               <span>Join the Low-Ticket Launchpad LIVE Waitlist</span>
             </button>
