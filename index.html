@@ -127,9 +127,47 @@
       background: transparent;
     }
 
-    /* ─── KIT FORM WRAPPER ─── */
+    /* ─── KIT FORM STYLING ─── */
     .ck-form-wrap {
       max-width: 500px;
+    }
+
+    .formkit-form .formkit-input {
+      background: #242424 !important;
+      color: #fff !important;
+      border: 1px solid #444 !important;
+      border-radius: 6px !important;
+      padding: 14px 16px !important;
+      font-size: 15px !important;
+      font-family: 'Inter', sans-serif !important;
+    }
+
+    .formkit-form .formkit-input::placeholder {
+      color: #888 !important;
+    }
+
+    .formkit-form .formkit-input:focus {
+      border-color: var(--blue) !important;
+      outline: none !important;
+    }
+
+    .formkit-form .formkit-submit {
+      background: var(--yellow) !important;
+      color: #000 !important;
+      border: none !important;
+      border-radius: 6px !important;
+      width: 100% !important;
+    }
+
+    .formkit-form .formkit-submit > span {
+      padding: 14px 24px !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      font-family: 'Inter', sans-serif !important;
+    }
+
+    .formkit-form .formkit-powered-by-convertkit-container {
+      display: none !important;
     }
 
     /* ─── COUNTDOWN ─── */
