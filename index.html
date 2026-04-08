@@ -74,7 +74,7 @@
 
     .hero h1 {
       font-family: 'Fjalla One', sans-serif;
-      font-size: clamp(22px, 3.2vw, 40px);
+      font-size: clamp(26px, 3.7vw, 46px);
       font-weight: 400;
       line-height: 1.15;
       max-width: 860px;
@@ -90,11 +90,12 @@
 
     .hero-brand {
       font-family: 'Fjalla One', sans-serif;
-      font-size: clamp(36px, 5vw, 56px);
+      font-size: clamp(18px, 2.2vw, 26px);
       font-weight: 400;
       text-transform: uppercase;
-      line-height: 0.95;
-      margin-bottom: 16px;
+      line-height: 1;
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
     }
 
     .hero-brand .live { color: var(--yellow); }
@@ -135,7 +136,7 @@
 
     /* ─── COUNTDOWN ─── */
     .countdown-section {
-      margin: 20px auto 0;
+      margin: -16px auto 0;
       max-width: 560px;
     }
 
@@ -329,14 +330,6 @@
       margin: 0 auto 8px;
     }
 
-    .bottom-disclaimer {
-      font-size: 13px;
-      color: #666;
-      max-width: 480px;
-      margin: 20px auto 0;
-      line-height: 1.6;
-    }
-
     /* ─── FOOTER ─── */
     footer {
       background: #080808;
@@ -371,15 +364,26 @@
       .hero-cta-label { text-align: left; }
       .hero-left .form-placeholder { margin-left: 0; }
       .hero-left .countdown-section { margin-left: 0; text-align: left; }
-      .countdown-grid { justify-content: flex-start; }
+      .hero-left .countdown-grid { justify-content: flex-start; }
       .product-wrap { margin: 0; max-width: 100%; padding-top: 72px; }
       .product-wrap img { max-width: 340px; margin: 0 auto; }
     }
 
     /* ─── MOBILE ─── */
     @media (max-width: 899px) {
+      .hero { padding: 24px 24px 32px; }
+      .hero-eyebrow { margin-bottom: 16px; }
+      .hero-brand { display: none; }
+      .hero h1 { margin-bottom: 16px; }
+      .hero-sub { margin-bottom: 6px; }
+      .hero-cta-label { margin-bottom: 14px; }
       .hero-right { display: none; }
       .hero-right-mobile { display: block !important; }
+      /* Override Kit's always-on 56px top padding above the email input */
+      .ck-form-wrap .formkit-form[data-uid="3336007db9"][min-width~="700"] [data-style="clean"],
+      .ck-form-wrap .formkit-form[data-uid="3336007db9"][min-width~="800"] [data-style="clean"] {
+        padding-top: 16px;
+      }
     }
     .hero-right-mobile {
       display: none;
@@ -430,7 +434,7 @@
 
     <!-- ── Countdown ── -->
     <div class="countdown-section">
-      <p class="countdown-label">Waitlist closes in</p>
+      <p class="countdown-label">Enrollment Opens In</p>
       <div class="countdown-grid">
         <div class="countdown-unit">
           <span class="countdown-number" id="cd-days">00</span>
@@ -517,7 +521,7 @@
   <!-- ═══════════════════════════ BOTTOM CTA ═══════════════════════════ -->
   <section class="bottom-cta">
 
-    <h2>Secure Your Spot &amp; Unlock Early Bird Bonuses</h2>
+    <h2>Secure Your Spot</h2>
     <p>Enrollment opens April 20th. Join the waitlist now to get first access.</p>
 
     <!-- ── ConvertKit Form ── -->
@@ -527,8 +531,8 @@
     </div>
 
     <!-- ── Second Countdown ── -->
-    <div class="countdown-section" style="margin-top: 48px;">
-      <p class="countdown-label">Waitlist closes in</p>
+    <div class="countdown-section" style="margin-top: 12px;">
+      <p class="countdown-label">Enrollment Opens In</p>
       <div class="countdown-grid">
         <div class="countdown-unit">
           <span class="countdown-number" id="cd-days-2">00</span>
@@ -551,8 +555,6 @@
         </div>
       </div>
     </div>
-
-    <p class="bottom-disclaimer">As a reminder: By joining the waitlist, you'll (a) be the first to know when enrollment opens and (b) get access to special, early bird bonuses.</p>
 
   </section>
 
