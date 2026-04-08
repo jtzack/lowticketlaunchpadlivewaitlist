@@ -371,8 +371,13 @@
 
     /* ─── MOBILE ─── */
     @media (max-width: 899px) {
+      .hero { padding: 24px 24px 32px; }
+      .hero-eyebrow { margin-bottom: 16px; }
+      .hero h1 { margin-bottom: 16px; }
+      .hero-sub { margin-bottom: 6px; }
+      .hero-cta-label { margin-bottom: 14px; }
       .hero-right { display: none; }
-      .hero-right-mobile { display: block !important; }
+      .hero-right-mobile { display: block !important; margin: 32px auto 0; }
     }
     .hero-right-mobile {
       display: none;
@@ -403,13 +408,6 @@
     </div>
 
     <h1>We've Made <em>$15,000,000+</em> Selling Digital Products—Now We Want To Help You Do The Same</h1>
-
-    <!-- Mobile product image (hidden on desktop) -->
-    <div class="hero-right-mobile">
-      <div class="product-wrap">
-        <img src="product-box.png" alt="Low-Ticket Launchpad" />
-      </div>
-    </div>
 
     <p class="hero-sub">On <strong style="color:#fff;">Monday, April 27th</strong>, we're launching <strong style="color:#fff;">Low-Ticket Launchpad LIVE</strong>: a 2-week live bootcamp to help you create and sell a $350 digital product in 14 days.</p>
 
@@ -444,6 +442,13 @@
           <span class="countdown-number" id="cd-secs">00</span>
           <span class="countdown-name">Seconds</span>
         </div>
+      </div>
+    </div>
+
+    <!-- Mobile product image (hidden on desktop) -->
+    <div class="hero-right-mobile">
+      <div class="product-wrap">
+        <img src="product-box.png" alt="Low-Ticket Launchpad" />
       </div>
     </div>
 
