@@ -379,6 +379,11 @@
       .hero-cta-label { margin-bottom: 14px; }
       .hero-right { display: none; }
       .hero-right-mobile { display: block !important; }
+      /* Override Kit's always-on 56px top padding above the email input */
+      .ck-form-wrap .formkit-form[data-uid="3336007db9"][min-width~="700"] [data-style="clean"],
+      .ck-form-wrap .formkit-form[data-uid="3336007db9"][min-width~="800"] [data-style="clean"] {
+        padding-top: 16px;
+      }
     }
     .hero-right-mobile {
       display: none;
