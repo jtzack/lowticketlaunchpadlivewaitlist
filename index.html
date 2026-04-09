@@ -408,7 +408,28 @@
     /* ─── TABLET ONLY ─── */
     @media (min-width: 768px) and (max-width: 899px) {
       .hero h1 {
-        font-size: clamp(34px, 4.6vw, 42px);
+        font-size: clamp(38px, 5vw, 46px);
+      }
+    }
+
+    /* ─── MOBILE ONLY ─── */
+    @media (max-width: 767px) {
+      /* Remove Kit's inner side padding so the CTA button gets every
+         available pixel of horizontal room. */
+      .ck-form-wrap .formkit-form[data-uid="3336007db9"][min-width~="700"] [data-style="clean"],
+      .ck-form-wrap .formkit-form[data-uid="3336007db9"][min-width~="800"] [data-style="clean"] {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      /* Shrink the submit button's font size and horizontal padding,
+         and prevent wrapping, so the CTA text stays on a single line. */
+      .ck-form-wrap .formkit-form[data-uid="3336007db9"] .formkit-submit {
+        font-size: clamp(12px, 3.5vw, 15px);
+      }
+      .ck-form-wrap .formkit-form[data-uid="3336007db9"] .formkit-submit > span {
+        padding: 14px 6px;
+        white-space: nowrap;
+        letter-spacing: -0.01em;
       }
     }
     .hero-right-mobile {
