@@ -369,7 +369,7 @@
       .product-wrap img { max-width: 340px; margin: 0 auto; }
     }
 
-    /* ─── MOBILE ─── */
+    /* ─── MOBILE / TABLET (shared) ─── */
     @media (max-width: 899px) {
       .hero { padding: 24px 24px 32px; }
       .hero-eyebrow { margin-bottom: 16px; }
@@ -379,10 +379,36 @@
       .hero-cta-label { margin-bottom: 14px; }
       .hero-right { display: none; }
       .hero-right-mobile { display: block !important; }
+
+      /* Center the hero form wrap on mobile & tablet */
+      .hero .ck-form-wrap { margin: 0 auto; }
+
+      /* Force Kit's email input and submit button to stack vertically
+         so the button spans the full row and its text stays on one line. */
+      .ck-form-wrap .formkit-form[data-uid="3336007db9"][min-width~="700"] .formkit-fields[data-stacked="false"],
+      .ck-form-wrap .formkit-form[data-uid="3336007db9"][min-width~="800"] .formkit-fields[data-stacked="false"] {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .ck-form-wrap .formkit-form[data-uid="3336007db9"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-field,
+      .ck-form-wrap .formkit-form[data-uid="3336007db9"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-field,
+      .ck-form-wrap .formkit-form[data-uid="3336007db9"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-submit,
+      .ck-form-wrap .formkit-form[data-uid="3336007db9"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-submit {
+        flex: 1 0 100%;
+        margin: 0 0 12px 0;
+      }
+
       /* Override Kit's always-on 56px top padding above the email input */
       .ck-form-wrap .formkit-form[data-uid="3336007db9"][min-width~="700"] [data-style="clean"],
       .ck-form-wrap .formkit-form[data-uid="3336007db9"][min-width~="800"] [data-style="clean"] {
         padding-top: 16px;
+      }
+    }
+
+    /* ─── TABLET ONLY ─── */
+    @media (min-width: 768px) and (max-width: 899px) {
+      .hero h1 {
+        font-size: clamp(34px, 4.6vw, 42px);
       }
     }
     .hero-right-mobile {
